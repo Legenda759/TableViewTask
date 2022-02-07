@@ -14,9 +14,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        settingsNavigation()
         return true
     }
-
+    
+    func settingsNavigation() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        appearance.backgroundColor = UIColor(hexString: "#617E9B")
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        let proxy = UINavigationBar.appearance()
+            proxy.tintColor = .white
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
