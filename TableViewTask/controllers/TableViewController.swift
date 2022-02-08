@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LoremSwiftum
 
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -26,22 +27,22 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func initViews() {
         view.backgroundColor = .white
-        title = "Прочее"
+        title = Lorem.title
         
-        aboveItem.append(Above(text1: "Направить письмо", image1: "post", image2: "call-1", text2: "Обратный звонок", image3: "chat", text3: "Онлайн чат с банком"))
+        aboveItem.append(Above(text1: Lorem.word + " " + Lorem.word, image1: "post", image2: "call-1", text2: Lorem.word + " " + Lorem.word, image3: "chat", text3: Lorem.word + " " + Lorem.word))
         
 
-        tablesItem1.append(Tables1(text: "Банк на карте", image: "location"))
-        tablesItem1.append(Tables1(text: "Публичная оферта", image: "document"))
-        tablesItem1.append(Tables1(text: "О приложении", image: "info"))
-        tablesItem1.append(Tables1(text: "Что нового?", image: "news"))
+        tablesItem1.append(Tables1(text: Lorem.sentence, image: "location"))
+        tablesItem1.append(Tables1(text: Lorem.sentence, image: "document"))
+        tablesItem1.append(Tables1(text: Lorem.sentence, image: "info"))
+        tablesItem1.append(Tables1(text: Lorem.sentence, image: "news"))
         
         
         
-        tablesItem2.append(Tables2(text: "Язык", image: "russia"))
-        tablesItem2.append(Tables2(text: "Настройки безопасности", image: "security"))
-        tablesItem2.append(Tables2(text: "Поделиться", image: "share"))
-        tablesItem2.append(Tables2(text: "Очистить кэш", image: "trash"))
+        tablesItem2.append(Tables2(text: Lorem.sentence, image: "russia"))
+        tablesItem2.append(Tables2(text: Lorem.sentence, image: "security"))
+        tablesItem2.append(Tables2(text: Lorem.sentence, image: "share"))
+        tablesItem2.append(Tables2(text: Lorem.sentence, image: "trash"))
         
         let nib = UINib(nibName: "Bottom1TableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "Bottom1TableViewCell")
@@ -90,7 +91,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 tableView.bounds.size.width, height: 35))
             headerLabel.font = UIFont.systemFont(ofSize: 15)
             headerLabel.textColor = UIColor.black
-            headerLabel.text = "Дополнительная информация"
+            headerLabel.text = Lorem.word
             headerLabel.textAlignment = .left
             headerView.addSubview(headerLabel)
         return headerView
@@ -101,7 +102,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 tableView.bounds.size.width, height: 35))
             headerLabel.font = UIFont.systemFont(ofSize: 15)
             headerLabel.textColor = UIColor.black
-            headerLabel.text = "Настройки"
+        headerLabel.text = Lorem.word
             headerLabel.textAlignment = .left
             headerView.addSubview(headerLabel)
         return headerView

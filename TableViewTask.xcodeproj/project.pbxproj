@@ -19,6 +19,7 @@
 		987B6BAA27ACD00300012F50 /* AboveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 987B6BA827ACD00300012F50 /* AboveTableViewCell.xib */; };
 		987B6BAD27ACD0FB00012F50 /* BottomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B6BAB27ACD0FB00012F50 /* BottomTableViewCell.swift */; };
 		987B6BAE27ACD0FB00012F50 /* BottomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 987B6BAC27ACD0FB00012F50 /* BottomTableViewCell.xib */; };
+		9889962C27B2B0F400E3D8CF /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = 9889962B27B2B0F400E3D8CF /* LoremSwiftum */; };
 		989D3B7B27AD28E50051D72A /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D3B7A27AD28E50051D72A /* extensions.swift */; };
 		989D3B8A27B00C1C0051D72A /* Bottom1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D3B8827B00C1C0051D72A /* Bottom1TableViewCell.swift */; };
 		989D3B8B27B00C1C0051D72A /* Bottom1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 989D3B8927B00C1C0051D72A /* Bottom1TableViewCell.xib */; };
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9889962C27B2B0F400E3D8CF /* LoremSwiftum in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +144,9 @@
 			dependencies = (
 			);
 			name = TableViewTask;
+			packageProductDependencies = (
+				9889962B27B2B0F400E3D8CF /* LoremSwiftum */,
+			);
 			productName = TableViewTask;
 			productReference = 987B6B8627ABAB1600012F50 /* TableViewTask.app */;
 			productType = "com.apple.product-type.application";
@@ -170,6 +175,9 @@
 				Base,
 			);
 			mainGroup = 987B6B7D27ABAB1600012F50;
+			packageReferences = (
+				9889962A27B2B0F400E3D8CF /* XCRemoteSwiftPackageReference "LoremSwiftum" */,
+			);
 			productRefGroup = 987B6B8727ABAB1600012F50 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -428,6 +436,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9889962A27B2B0F400E3D8CF /* XCRemoteSwiftPackageReference "LoremSwiftum" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lukaskubanek/LoremSwiftum";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9889962B27B2B0F400E3D8CF /* LoremSwiftum */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9889962A27B2B0F400E3D8CF /* XCRemoteSwiftPackageReference "LoremSwiftum" */;
+			productName = LoremSwiftum;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 987B6B7E27ABAB1600012F50 /* Project object */;
 }
